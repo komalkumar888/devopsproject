@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
+        stage('Checkout Code') {
             steps {
-                git 'https://github.com/your-repo.git'
+                git branch: 'main',
+                    url: 'https://github.com/komalkumar888/devopsproject.git'
             }
         }
 
